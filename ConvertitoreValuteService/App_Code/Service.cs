@@ -29,4 +29,28 @@ public class Service : IService
 
         return valute;
     }
+
+    public double Converti(double importo, string da, string a)
+    {
+        valute = GetValute();
+        double risultato = 0;
+        double TassoDA = 0;
+        double TassoA = 0;
+        foreach (Valuta v in valute)
+        {
+            if (v.Sigla == da)
+            {
+                TassoDA = v.TassoConversioneEuro;
+            }
+        }
+        foreach (Valuta v in valute)
+        {
+            if (v.Sigla == a)
+            {
+                TassoA = v.TassoConversioneEuro;
+            }
+        }
+        risultato = importo * (TassoA / TassoDA);
+        return risultato;
+    }
 }

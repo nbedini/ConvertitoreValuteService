@@ -18,5 +18,5 @@ public interface IService
 	List<Valuta> GetValute();
 
 	[OperationContract]
-	double converti(double importo, string da, string a);
+	double Converti(double importo, string da, string a);
 }
