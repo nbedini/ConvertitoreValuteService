@@ -14,8 +14,8 @@ public class Valuta
     public string Sigla { get; set; }
     [DataMember]
     public string Nome { get; set; }
-    public float TassoConversioneEuro { get; set; }
-    public Valuta(string sigla, string nome, float tassoconversioneeuro)
+    public double TassoConversioneEuro { get; set; }
+    public Valuta(string sigla, string nome, double tassoconversioneeuro)
     {
         this.Sigla = sigla;
         this.Nome = nome;

@@ -14,5 +14,9 @@ public interface IService
 	[OperationContract]
 	string GetData(int value);
 
-	// TODO: aggiungere qui le operazioni del servizio
+	[OperationContract]
+	List<Valuta> GetValute();
+
+	[OperationContract]
+	double converti(double importo, string da, string a);
 }
